@@ -40,6 +40,10 @@ public class Application extends JFrame implements ActionListener {
 
 		JButton restart = new JButton("Restart");
 		restart.setBounds(10, 10, (int) ((propPanel.getWidth() - 20) * 0.2), propPanel.getHeight() - 20);
+		restart.addActionListener(e -> {
+			gameLogic = new Logic();
+			board.updateGameLogic(gameLogic);
+		});
 		propPanel.add(restart);
 
 		JSlider speedSlider = new JSlider(1,1000, (int) Constants.FPS);

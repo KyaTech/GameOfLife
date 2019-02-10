@@ -19,6 +19,10 @@ public class Board extends JPanel {
 		this.gameLogic = gameLogic;
 	}
 
+	public void updateGameLogic(Logic gameLogic) {
+		this.gameLogic = gameLogic;
+	}
+
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
